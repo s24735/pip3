@@ -9,20 +9,20 @@ public class Main {
 
 //        ZADANIE 1
         System.out.println("ZADANIE 1");
-//        zadanie1(scanner);
+        zadanie1(scanner);
 
 //        ZADANIE 2
         System.out.println("ZADANIE 2");
-//        zadanie2(scanner);
+        zadanie2(scanner);
 
 //        ZADANIE 3
         System.out.println("ZADANIE 3");
-//        zadanie3(scanner);
+        zadanie3(scanner);
 
 
 //        ZADANIE 4
         System.out.println("ZADANIE 4");
-//        zadanie4(scanner, 10.00, false);
+        zadanie4(scanner, 10.00, false);
 //        zadanie4(scanner, 10.00, true);
 
 //        ZADANIE 5
