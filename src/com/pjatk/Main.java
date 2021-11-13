@@ -3,9 +3,10 @@ package com.pjatk;
 import java.util.Scanner;
 
 public class Main {
+    public static Scanner scanner=new Scanner(System.in);
+
 
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
 
 //        ZADANIE 1
         System.out.println("ZADANIE 1");
@@ -32,20 +33,24 @@ public class Main {
         String firstTitle=scanner.nextLine();
 
         System.out.println("Podaj czas trwania pierwszego utworu(minuty): ");
-        int firstTimeMin=scanner.nextInt();
+        String firstTimeMinS=scanner.nextLine();
+        int firstTimeMin=Integer.parseInt(firstTimeMinS);
 
         System.out.println("Podaj czas trwania pierwszego utworu(sekundy): ");
-        int firstTimeSec=scanner.nextInt();
+        String firstTimeSecS=scanner.nextLine();
+        int firstTimeSec=Integer.parseInt(firstTimeSecS);
 
 //      druga piosenka
         System.out.println("Podaj tytul drugiego utworu: ");
         String secondTitle=scanner.nextLine();
 
         System.out.println("Podaj czas trwania drugiego utworu(minuty): ");
-        int secondTimeMin=scanner.nextInt();
+        String secondTimeMinS=scanner.nextLine();
+        int secondTimeMin=Integer.parseInt(secondTimeMinS);
 
         System.out.println("Podaj czas trwania drugiego utworu(sekundy): ");
-        int secondTimeSec=scanner.nextInt();
+        String secondTimeSecS=scanner.nextLine();
+        int secondTimeSec=Integer.parseInt(secondTimeSecS);
 
         String firstSong = zadanie5(firstTitle, firstTimeMin, firstTimeSec);
         String secondSong = zadanie5(secondTitle, secondTimeMin, secondTimeSec);
@@ -100,10 +105,11 @@ public class Main {
 
     public static void zadanie4(Scanner scanner, double productPrice, boolean isDiscount) {
         System.out.println("Wczytaj liczbe sztuk zakupionego towaru:");
-        int productCount=scanner.nextInt();
+        String productCountS=scanner.nextLine();
+        int productCount=Integer.parseInt(productCountS);
 
         if(!isDiscount)
-            productPrice*=0.1;
+            productPrice=productCount+(productCount*0.1);
         else {
             if(productCount<1)
                 System.out.println("Liczba sztuk musi byc dodatnia");
@@ -116,7 +122,9 @@ public class Main {
 
     public static void zadanie3(Scanner scanner){
         System.out.println("Podaj rok");
-        int year=scanner.nextInt();
+        String yearS=scanner.nextLine();
+        int year=Integer.parseInt(yearS);
+
         if(isYearLeap(year)){
             System.out.println("Rok jest przestepny");
         }
@@ -135,10 +143,13 @@ public class Main {
 
     public static void zadanie2(Scanner scanner) {
         System.out.println("Podaj miesiac:");
-        int month=scanner.nextInt();
+        String monthS=scanner.nextLine();
+        int month=Integer.parseInt(monthS);
+
 
         System.out.println("Podaj rok:");
-        int year=scanner.nextInt();
+        String yearS=scanner.nextLine();
+        int year=Integer.parseInt(yearS);
 
         String quarter="";
 
